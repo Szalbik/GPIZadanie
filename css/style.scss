@@ -1,0 +1,88 @@
+@import "_normalize";
+
+body {
+  margin: 0;
+}
+
+body.daltonism {
+  color: yellow;
+  background: black;
+
+  .logo {
+    animation: none;
+    color: yellow;
+  }
+
+  nav ul li .high-contrast {
+    padding: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    color: yellow;
+    outline: none;
+  }
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr auto minmax(800px, 3fr) 1fr;
+  background-color: rgba($color: black, $alpha: 0.8);
+  color: white;
+
+  .logo {
+    grid-column: 2/3;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    border-radius: 20px;
+  }
+
+  nav {
+    grid-column: 3/4;
+    display: flex;
+
+    ul {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      list-style-type: none;
+      li {
+        margin-left: 1em;
+
+        .high-contrast {
+          padding: 1em;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .intro {
+    background: hsl(120, 100%, 75%) url("/img/tiger.jpg") no-repeat fixed center;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@keyframes example {
+  from {
+    background-color: red;
+    color: white;
+    transform: rotate(0deg);
+  }
+  to {
+    background-color: yellow;
+    color: black;
+    transform: rotate(360deg);
+  }
+}
