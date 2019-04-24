@@ -21,6 +21,12 @@ body.daltonism nav ul li .high-contrast {
   background: transparent;
   color: yellow;
   outline: none;
+  border: 1px dashed yellow;
+}
+
+body.daltonism .main .intro {
+  background: black;
+  color: yellow;
 }
 
 .header {
@@ -88,6 +94,25 @@ body.daltonism nav ul li .high-contrast {
   background: #80ff80 url("/img/tiger.jpg") no-repeat fixed center;
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.main .intro h2,
+.main .intro p {
+  width: 60vw;
 }
 
 @-webkit-keyframes example {
